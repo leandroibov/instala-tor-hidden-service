@@ -15,3 +15,7 @@ sudo ./instala-tor.sh
 
 Saiba mais:
 https://www.traderprofissional.com.br/seguranca-digital.aspx
+
+https://www.youtube.com/watch?v=xHh0BkXVEiI
+
+
