@@ -1,3 +1,7 @@
+hashs sha256
+
+337d8cc3f12f42b86246a096cc57f5a3e4eb0cff39b5b1cee0b66db9420c9c2b  instala_tor.sh
+
 Instala o tor hidden service rapidamente no linux:
 
 Funciona no linux Debian e similares:
