@@ -4,7 +4,10 @@ hashs sha256
 
 Instala o tor hidden service rapidamente no linux:
 
-Funciona no linux Debian e similares:
+Funciona no linux Debian versão Bullseye! Use no terminal lsb_release -c para checar a versão do seu Debian!
+
+Se for outra versão, terá que modificar o código!
+
 
 sudo chmod +x instala-tor.sh
 
