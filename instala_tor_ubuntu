@@ -5,20 +5,18 @@
 echo "TOR from tor project"
 echo "ATENÇÃO:"
 echo "Visite https://support.torproject.org/apt/ para checar se mudou algo nos requisitos de instalação e modifique o código do script se necessário"
-echo "Versão para instalar em Debian Linux!"
+echo "Versão para instalar no Ubuntu!"
 echo ""
 
-echo "Verificando a versão do seu linux...";
-echo "lsb_release -c";
-lsb_release -c;
-echo "";
-echo "cat /etc/debian_version";
-cat /etc/debian_version;
+echo "Verificando a arquitetura do seu linux Ubuntu...";
+echo "dpkg --print-architecture";
+dpkg --print-architecture;
+
 
 
 echo "";
-read -rp "Digite exatamente o codename ou versão do seu debian linux para configurar a instalação:" codename
-echo "Nome da versão do sistema linux escolhido: $codename"
+read -rp "Digite exatamente o codename ou versão do seu debian linux para configurar a instalação:" architecture
+echo "Nome da versão do sistema linux escolhido: $architecture"
 echo "";
 
 
@@ -32,15 +30,22 @@ echo "Criando arquivo para tor com touch /etc/apt/sources.list.d/tor.list"
 echo ""
 sudo touch /etc/apt/sources.list.d/tor.list
 echo ""
+
+
+deb     [arch=$architecture signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org focal main
+   deb-src [arch=$architecture signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org focal main
+
+
+
 echo "Adicionando repositórios do tor project criptografados com pgp"
 echo ""
-echo "sudo echo deb     [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $codename main >> /etc/apt/sources.list.d/tor.list"
+echo "deb     [arch=$architecture signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org focal main"
 echo ""
-sudo echo "deb     [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $codename main" >> /etc/apt/sources.list.d/tor.list
+sudo echo "deb     [arch=$architecture signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org focal main" >> /etc/apt/sources.list.d/tor.list
 echo ""
-echo "sudo echo deb-src [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $codename main >> /etc/apt/sources.list.d/tor.list"
+echo "deb-src [arch=$architecture signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org focal main"
 echo ""
-sudo echo "deb-src [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $codename main" >> /etc/apt/sources.list.d/tor.list
+sudo echo "deb-src [arch=$architecture signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org focal main" >> /etc/apt/sources.list.d/tor.list
 echo ""
 echo "BAIXANDO CHAVE PGP wget -O- https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --dearmor | tee /usr/share/keyrings/tor-archive-keyring.gpg >/dev/null"
 sudo wget -O- https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --dearmor | tee /usr/share/keyrings/tor-archive-keyring.gpg >/dev/null
