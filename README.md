@@ -1,40 +1,44 @@
 
+# Quickly Install the Tor Hidden Service on Linux:**
 
-Instala o tor hidden service rapidamente no linux:
+This works on Debian Linux and has an installation version for Ubuntu, according to the Tor Project tutorial. However, everything is automated by the script!  
 
-Funciona no linux Debian versão Bullseye! Use no terminal lsb_release -c para checar a versão do seu Debian!
+There is a version for Debian and another for Ubuntu!  
 
-Se for outra versão, terá que modificar o código!
-
-
-sudo chmod +x instala-tor.sh
-
-executar:
+The Debian version may work for other Linux distributions, but it needs to be tested and verified.
 
 
-sudo ./instala-tor.sh
+## Run the following commands:
+
+sudo chmod +x instala_tor.sh
+
+## for ubuntu...
+
+sudo chmod +x instala_tor_ubuntu.sh
+
+## Then execute:
+
+sudo ./instala_tor.sh
+
+## for ubuntu...
+
+sudo ./instala_tor_ubuntu.sh
+
+"Visit https://support.torproject.org/apt/ to check if there have been any changes to the installation requirements and modify the script code if necessary."
 
 
-"Visite https://support.torproject.org/apt/ para checar se mudou algo nos requisitos de instalação e modifique o código do script se necessário"
-
-
-
-
-
-##################################################################################################
-
-Doe monero para nos ajudar: 
+# Doe monero para nos ajudar (donate): 
 
 87JGuuwXzoMGwQAcSD7cvS7D7iacPpN2f5bVqETbUvCgdEmrPZa12gh5DSiKKRgdU7c5n5x1UvZLj8PQ7AAJSso5CQxgjak
 
 
-Página oficial de segurança digital:
+## Página oficial de segurança digital:
 
 
 https://traderprofissional.com.br/seguranca-digital.aspx
 
 
-Vídeo tutorial youtube: 
+## Vídeo tutorial youtube: 
 
 
 https://www.youtube.com/watch?v=xHh0BkXVEiI
