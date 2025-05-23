@@ -27,9 +27,9 @@ sudo ./instala_tor_ubuntu.sh
 "Visit https://support.torproject.org/apt/ to check if there have been any changes to the installation requirements and modify the script code if necessary."
 
 
-# Doe monero para nos ajudar (donate): 
+# Doe monero para nos ajudar: (donate XMR)
 
-87JGuuwXzoMGwQAcSD7cvS7D7iacPpN2f5bVqETbUvCgdEmrPZa12gh5DSiKKRgdU7c5n5x1UvZLj8PQ7AAJSso5CQxgjak
+    87JGuuwXzoMGwQAcSD7cvS7D7iacPpN2f5bVqETbUvCgdEmrPZa12gh5DSiKKRgdU7c5n5x1UvZLj8PQ7AAJSso5CQxgjak
 
 
 ## Página oficial de segurança digital:
